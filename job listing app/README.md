@@ -28,4 +28,4 @@ Start the development server:
 # Screenshots:
 
 ![Image1](images/image1.PNG)
-![Image2](images\image2.PNG)
+![Image2](images/image2.PNG)
