@@ -25,7 +25,7 @@ Start the development server:
 
 ```npm run dev```
 
-# Screenshots
+# Screenshots:
 
-![Image1](job listing app/images/image1.PNG)
+![Image1]()
 ![Image2](images\image2.PNG)
