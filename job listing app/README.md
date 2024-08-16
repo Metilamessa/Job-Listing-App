@@ -19,7 +19,7 @@ Install dependencies:
 
 ```cd job-listing-app```
 
-````npm install```
+```npm install```
 
 Start the development server:
 
