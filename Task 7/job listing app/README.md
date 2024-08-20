@@ -27,4 +27,4 @@ Start the development server:
 ![Image1](images/image1.PNG)
 
 
-![Image2](images\image2.PNG)
+![Image2](images/image2.PNG)
