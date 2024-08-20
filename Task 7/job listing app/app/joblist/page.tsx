@@ -27,14 +27,18 @@ const JobListPage = () => {
         </div>
       </div>
       <section>
-        {jobs.map((job) => (
-          <JobCard
-            key={job.id}
-            jobPost={job}
-            pic={job.companyLogoUrl || '/default-image.png'}
-            jobId={job.id}
-          />
-        ))}
+        {Array.isArray(jobs) && jobs.length > 0 ? (
+          jobs.map((job) => (
+            <JobCard
+              key={job.id}
+              jobPost={job}
+              pic={job.logoUrl || '/im2.webp'}
+              jobId={job.id}
+            />
+          ))
+        ) : (
+          <p>No jobs available</p>
+        )}
       </section>
     </main>
   );

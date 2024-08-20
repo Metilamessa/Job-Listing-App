@@ -1,4 +1,4 @@
-// 'use client'
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import JobPost from '../models/JobPost';
 interface JobCardProps {
   jobPost: JobPost;
   pic: string;
-  jobId: number;
+  jobId: string;  
 }
 
 const JobCard: React.FC<JobCardProps> = ({ jobPost, pic, jobId }) => {
@@ -26,19 +26,19 @@ const JobCard: React.FC<JobCardProps> = ({ jobPost, pic, jobId }) => {
           <div className="mb-2">
             <h1 className="font-body text-dark-blue font-semibold text-lg">{title}</h1>
             <h2 className="text-grey-subtitle font-body text-sm">
-              {jobPost.company}
+              {jobPost.orgName}
               <span className="text-gray-500 text-2xl relative bottom-1">.</span>
-              {jobPost.about.location}
+              {jobPost.location.join(', ')}
             </h2>
           </div>
           <p className="font-body text-dark-blue text-sm">{jobPost.description}</p>
           <div className="mt-4 flex gap-2">
             <div className="border-r-2 pr-3">
               <span className="rounded-full border-transparent px-4 py-1 text-green-tag bg-green-tag bg-opacity-10 text-xs">
-                In Person
+                {jobPost.opType === 'inPerson' ? 'In Person' : 'Virtual'}
               </span>
             </div>
-            {jobPost.about.categories.slice(0, 2).map((category, index) => (
+            {jobPost.categories.slice(0, 2).map((category, index) => (
               <button
                 key={index}
                 className={`font-heading text-xs rounded-full border px-4 ${index === 0 ? 'border-my-yellow hover:bg-my-yellow hover:text-white text-my-yellow' : 'border-purple-tag hover:bg-purple-tag hover:text-white text-purple-tag'}`}

@@ -1,8 +1,12 @@
+import React from 'react';
+import JobListPage from './joblist/page';
 
-import { AppProps } from 'next/app';
-import '../app/globals.css'; 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+const Home = () => {
+  return (
+    <div>
+      <JobListPage />
+    </div>
+  );
+};
 
-export default MyApp;
+export default Home;

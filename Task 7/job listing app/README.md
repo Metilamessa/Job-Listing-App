@@ -1,11 +1,8 @@
 
-# Job Listing Application
+# Task 7: Integrating API Data into the Application
 
-This is a React-based job listing application that displays job cards with relevant information. The application is built using Nextjs, Tailwind CSS, and a JSON data source.
+The goal of this task is to integrate data from a provided API endpoint into your application and populate the cards with the fetched data. This will involve fetching the data from the API, handling the data correctly, and ensuring the application displays the fetched data properly in the user interface.
 
-# Features
-Job Card Component: A reusable React component that represents a job listing card, displaying the job title, company name, job description, and an avatar image.
-Job Listing Dashboard: A page that showcases the job cards, populated with the provided JSON data.
 
 # Getting Started
 

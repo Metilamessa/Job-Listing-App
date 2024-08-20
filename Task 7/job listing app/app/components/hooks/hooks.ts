@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import JobPost from '../../models/JobPost';
 
@@ -13,8 +15,16 @@ export const useFetchJobs = () => {
         if (!response.ok) {
           throw new Error('Failed to fetch jobs');
         }
-        const data: JobPost[] = await response.json();
-        setJobs(data);
+        const data = await response.json();
+        
+        console.log('Fetched Data:', data);
+
+        if (Array.isArray(data.data)) {
+          setJobs(data.data);  
+        } else {
+          console.error('Data is not an array:', data);
+          setError('Unexpected data format');
+        }
       } catch (err) {
         if (err instanceof Error) {
           setError(err.message);
